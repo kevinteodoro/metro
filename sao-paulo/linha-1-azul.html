@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0ea5e9" />
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -54,6 +55,11 @@
     .mapa-wrap{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:1rem}
     .svg-wrap{background:#fff;border:1px dashed #e5e7eb;border-radius:12px;padding:1rem}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .sr-only.sr-only-focusable:active,.sr-only.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;clip:auto;background:#fff;padding:.5rem;border:1px solid #e5e7eb;border-radius:6px}
+    .toc{display:flex;flex-wrap:wrap;gap:.5rem;padding:.75rem;background:#fff;border:1px solid #e5e7eb;border-radius:10px;margin:0 0 1rem 0}
+    .toc a{display:inline-block;padding:.5rem .75rem;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;color:#111827;text-decoration:none}
+    .toc a:hover{background:#e5e7eb}
+    .search{width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:8px;margin:.5rem 0 1rem 0}
     @media (max-width:768px){.hero{padding:1.25rem 0}}
   </style>
 
@@ -77,6 +83,7 @@
   </script>
 </head>
 <body>
+  <a href="#conteudo" class="sr-only sr-only-focusable">Pular para o conteúdo</a>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BDKKZ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -94,10 +101,19 @@
       <p class="muted">Mapa, estações, integrações e horários atualizados.</p>
     </div>
   </header>
+  
+  <nav class="container toc" aria-label="Navegação da página">
+    <a href="#mapa">Mapa</a>
+    <a href="#esquema">Esquema</a>
+    <a href="#horarios">Horários</a>
+    <a href="#integracoes">Integrações</a>
+    <a href="#estacoes">Estações</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 
-  <main class="container" role="main">
+  <main id="conteudo" class="container" role="main">
     <section class="grid grid-2">
-      <article class="card mapa-wrap" aria-labelledby="mapa-titulo">
+      <article id="mapa" class="card mapa-wrap" aria-labelledby="mapa-titulo">
         <h2 id="mapa-titulo">Mapa da Linha 1-Azul</h2>
         <figure>
           <img 
@@ -105,12 +121,13 @@
             srcset="/img/sp-linha-1-azul-800.webp 800w, /img/sp-linha-1-azul-1200.webp 1200w, /img/sp-linha-1-azul.webp 1600w" 
             sizes="(max-width: 768px) 100vw, 600px" 
             width="1200" height="675" 
+            loading="lazy" decoding="async"
             alt="Mapa esquemático da Linha 1-Azul do metrô de São Paulo com todas as estações." />
           <figcaption>Mapa oficial simplificado da Linha 1-Azul (Jabaquara ↔ Tucuruvi).</figcaption>
         </figure>
       </article>
 
-      <aside class="card svg-wrap" aria-labelledby="esquema-titulo">
+      <aside id="esquema" class="card svg-wrap" aria-labelledby="esquema-titulo">
         <h2 id="esquema-titulo">Esquema da Linha (SVG)</h2>
         <svg viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle svgDesc">
           <title id="svgTitle">Esquema simplificado Linha 1-Azul</title>
@@ -223,19 +240,45 @@
     </section>
 
     <section class="grid grid-2">
-      <article class="card">
+      <article id="horarios" class="card">
         <h2>Horários e frequência</h2>
         <p>Funcionamento estimado: diariamente, aproximadamente das 4h40 às 0h (varia por estação e dia). Em horários de pico, os trens costumam ter intervalos de 2 a 4 minutos.</p>
       </article>
-      <article class="card">
+      <article id="integracoes" class="card">
         <h2>Integrações principais</h2>
         <p>Conexões com as linhas 2-Verde (Ana Rosa/Paraíso), 3-Vermelha (Sé), 4-Amarela (Luz), 7-Rubi/11-Coral/13-Jade (CPTM em Luz) e terminais de ônibus como Jabaquara e Tietê.</p>
       </article>
     </section>
 
-    <section class="card">
+    <section id="estacoes" class="card">
       <h2>Estações (sul → norte)</h2>
-      <p>Jabaquara, Conceição, São Judas, Saúde, Praça da Árvore, Santa Cruz, Vila Mariana, Ana Rosa, Paraíso, Vergueiro, São Joaquim, Liberdade, Sé, São Bento, Luz, Tiradentes, Armênia, Portuguesa-Tietê, Carandiru, Santana, Jardim São Paulo-Ayrton Senna, Parada Inglesa e Tucuruvi.</p>
+      <label for="busca-estacao" class="sr-only">Buscar estação</label>
+      <input id="busca-estacao" class="search" type="search" placeholder="Buscar estação..." inputmode="search" autocomplete="off" />
+      <ul id="lista-estacoes" role="list">
+        <li>Jabaquara</li>
+        <li>Conceição</li>
+        <li>São Judas</li>
+        <li>Saúde</li>
+        <li>Praça da Árvore</li>
+        <li>Santa Cruz</li>
+        <li>Vila Mariana</li>
+        <li>Ana Rosa</li>
+        <li>Paraíso</li>
+        <li>Vergueiro</li>
+        <li>São Joaquim</li>
+        <li>Liberdade</li>
+        <li>Sé</li>
+        <li>São Bento</li>
+        <li>Luz</li>
+        <li>Tiradentes</li>
+        <li>Armênia</li>
+        <li>Portuguesa-Tietê</li>
+        <li>Carandiru</li>
+        <li>Santana</li>
+        <li>Jardim São Paulo-Ayrton Senna</li>
+        <li>Parada Inglesa</li>
+        <li>Tucuruvi</li>
+      </ul>
     </section>
 
     <nav class="grid grid-2" aria-label="Links internos">
@@ -246,6 +289,33 @@
       <a class="card" href="/sao-paulo/linha-15-prata.html">Linha 15-Prata</a>
       <a class="card" href="/sao-paulo/mapa-metro-e-cptm.html">Mapa Metrô + CPTM</a>
     </nav>
+
+    <section class="card" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Perguntas frequentes</h2>
+      <details>
+        <summary>Qual o horário de funcionamento da Linha 1-Azul?</summary>
+        <p>De forma geral, opera aproximadamente das 4h40 às 0h, com variações por estação e dia da semana. Consulte avisos locais para eventos e feriados.</p>
+      </details>
+      <details>
+        <summary>Como integrar com ônibus e CPTM?</summary>
+        <p>As integrações principais ocorrem nas estações Sé e Luz (CPTM), além de terminais como Jabaquara e Tietê. A política tarifária pode variar conforme bilhete e período.</p>
+      </details>
+      <details>
+        <summary>Qual o valor da tarifa?</summary>
+        <p>Os valores podem mudar. Verifique informações oficiais mais recentes antes da viagem para tarifas atualizadas e benefícios.</p>
+      </details>
+      <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Qual o horário de funcionamento da Linha 1-Azul?","acceptedAnswer":{"@type":"Answer","text":"Opera aproximadamente das 4h40 às 0h, variando por estação e dia."}},
+          {"@type":"Question","name":"Como integrar com ônibus e CPTM?","acceptedAnswer":{"@type":"Answer","text":"Integrações em Sé e Luz (CPTM) e terminais como Jabaquara e Tietê."}},
+          {"@type":"Question","name":"Qual o valor da tarifa?","acceptedAnswer":{"@type":"Answer","text":"Valores podem mudar; consulte fontes oficiais para tarifas atualizadas."}}
+        ]
+      }
+      </script>
+    </section>
   </main>
 
   <footer class="container" role="contentinfo">
@@ -265,6 +335,16 @@
           e.preventDefault(); window.scrollTo({top:t.offsetTop-16,behavior:'smooth'});
         });
       });
+      // Filtro de estações
+      var input=document.getElementById('busca-estacao');
+      if(input){
+        input.addEventListener('input',function(){
+          var q=this.value.toLowerCase();
+          document.querySelectorAll('#lista-estacoes li').forEach(function(li){
+            li.style.display = li.textContent.toLowerCase().indexOf(q) !== -1 ? '' : 'none';
+          });
+        });
+      }
     }
     init();
   })();
