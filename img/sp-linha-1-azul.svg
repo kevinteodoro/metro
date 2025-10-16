@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa simplificado da Linha 1-Azul do Metrô de São Paulo</title>
+  <desc id="desc">Linha azul vertical com estações de Jabaquara a Tucuruvi.</desc>
+  <defs>
+    <style>
+      .bg{fill:#ffffff}
+      .line{stroke:#0ea5e9;stroke-width:20;stroke-linecap:round}
+      .station{fill:#0ea5e9}
+      .label{font:24px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;fill:#111827}
+      .title{font:36px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;fill:#111827}
+      .subtitle{font:20px system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;fill:#6b7280}
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="675" />
+  <text x="40" y="60" class="title">Linha 1-Azul — Jabaquara ↔ Tucuruvi</text>
+  <text x="40" y="95" class="subtitle">Mapa esquemático (placeholder)</text>
+  <line x1="600" y1="140" x2="600" y2="600" class="line" />
+  <!-- Estações principais (amostra) -->
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="580" r="10" class="station" />
+    <text x="620" y="586" class="label">Jabaquara</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="520" r="10" class="station" />
+    <text x="620" y="526" class="label">Conceição</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="460" r="10" class="station" />
+    <text x="620" y="466" class="label">São Judas</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="400" r="10" class="station" />
+    <text x="620" y="406" class="label">Vila Mariana</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="340" r="10" class="station" />
+    <text x="620" y="346" class="label">Paraíso</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="280" r="10" class="station" />
+    <text x="620" y="286" class="label">Sé</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="220" r="10" class="station" />
+    <text x="620" y="226" class="label">Luz</text>
+  </g>
+  <g transform="translate(0,0)">
+    <circle cx="600" cy="160" r="10" class="station" />
+    <text x="620" y="166" class="label">Tucuruvi</text>
+  </g>
+</svg>
