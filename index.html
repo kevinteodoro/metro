@@ -1,24 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metro</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N7Q7XMDD');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Linhas de Metrô do Brasil - Mapas, Horários e Tarifas | MetroBrasil</title>
+  <meta name="description" content="Guia completo das linhas de metrô do Brasil. Mapas atualizados, horários, tarifas e dicas para São Paulo, Rio, Brasília, BH, Recife, Salvador e Fortaleza." />
+
+  <link rel="canonical" href="https://www.metrobrasil.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Linhas de Metrô do Brasil - Mapas, Horários e Tarifas" />
+  <meta property="og:description" content="Guia completo das linhas de metrô do Brasil. Mapas atualizados, horários, tarifas e dicas para todas as capitais com metrô." />
+  <meta property="og:url" content="https://www.metrobrasil.com.br/" />
+  <meta property="og:image" content="https://www.metrobrasil.com.br/img/og-metro.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Linhas de Metrô do Brasil - Mapas, Horários e Tarifas" />
+  <meta name="twitter:description" content="Guia completo das linhas de metrô do Brasil. Mapas atualizados, horários, tarifas e dicas para todas as capitais com metrô." />
+  <meta name="twitter:image" content="https://www.metrobrasil.com.br/img/og-metro.jpg" />
+
+  <!-- CSS COMPLETO inline (não usar arquivos externos) -->
+  <style>
+    /* Reset e base */
+    *,*::before,*::after{box-sizing:border-box}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.6;color:#1f2937;background:#fff}h1,h2,h3,h4,h5,h6{margin:0;font-weight:600;line-height:1.2}p{margin:0 0 1rem 0}a{color:#2563eb;text-decoration:none;transition:color 0.2s}a:hover{color:#1e40af;text-decoration:underline}img{max-width:100%;height:auto;display:block}ul,ol{margin:0;padding:0}li{list-style:none}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;margin:0}button{cursor:pointer;border:none;background:none}table{border-collapse:collapse;border-spacing:0}
+    
+    /* Variáveis CSS */
+    :root{--primary:#2563eb;--primary-dark:#1e40af;--accent:#3b82f6;--text:#1f2937;--text-light:#6b7280;--bg-light:#f9fafb;--border:#e5e7eb;--success:#059669;--white:#fff;--shadow:0 2px 8px rgba(0,0,0,0.1);--shadow-lg:0 4px 12px rgba(0,0,0,0.15);--radius:8px;--radius-lg:12px;--transition:all 0.2s ease}
+    
+    /* Layout */
+    .container{width:min(1200px,95%);margin:0 auto;padding:0 1rem}.grid{display:grid;gap:2rem}.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+    
+    /* Componentes */
+    .btn{display:inline-block;padding:1rem 2rem;background:var(--primary);color:var(--white);border-radius:var(--radius);font-weight:600;text-decoration:none;transition:var(--transition);border:1px solid var(--primary)}.btn:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:var(--shadow-lg);text-decoration:none}
+    
+    .card{background:var(--white);padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid var(--border);transition:var(--transition)}.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.15)}.card h3{color:var(--primary);margin:0 0 1rem 0;font-size:1.25rem}.card p{margin:0;color:var(--text-light)}
+    
+    .hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:var(--white);padding:3rem 0;text-align:center}.hero h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 1rem 0;font-weight:700}.hero p{font-size:1.2rem;margin:0 0 2rem 0;opacity:0.9}
+    
+    .section{padding:3rem 0}.section:nth-child(even){background:var(--bg-light)}
+    
+    .city-list{list-style:none;padding:0;margin:0}.city-list li{margin:0 0 1rem 0;padding:1rem;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);border-left:4px solid var(--primary)}.city-list a{color:var(--text);text-decoration:none;font-weight:600;display:block}.city-list a:hover{color:var(--primary)}.city-list p{margin:0.5rem 0 0 0;color:var(--text-light);font-size:0.9rem}
+    
+    .divider{text-align:center;margin:2rem 0;font-size:1.5rem;color:var(--text-light)}
+    
+    /* Responsive */
+    @media (max-width:768px){.container{padding:0 0.5rem}.hero{padding:2rem 0}.section{padding:2rem 0}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.card{padding:1.5rem}}
+    @media (max-width:480px){.btn{padding:0.75rem 1.5rem;font-size:0.9rem}.card{padding:1rem}}
+    
+    /* Acessibilidade */
+    .btn:focus-visible,a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}.btn:hover{transform:none}.card:hover{transform:none}}
+  </style>
+
+  <!-- JSON-LD (ajuste conforme o tipo de página) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Linhas de Metrô do Brasil",
+    "url":"https://www.metrobrasil.com.br/",
+    "description":"Guia completo das linhas de metrô do Brasil com mapas, horários, tarifas e dicas para todas as capitais com sistema metroviário.",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.metrobrasil.com.br/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    },
+    "breadcrumb":{
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Início","item":"https://www.metrobrasil.com.br/"}
+      ]
+    }
+  }
+  </script>
+
+  <!-- CSS está 100% inline acima - não usar arquivos externos -->
 </head>
 <body>
-    <h1>Metro Brasil</h1>
-    <nav>
-        <h2>São Paulo</h2>
-        <ul>
-            <li><a href="sao-paulo/">Metrô São Paulo</a></li>
-            <li><a href="sao-paulo/linha-1-azul.html">Linha 1-Azul</a></li>
-            <li><a href="sao-paulo/linha-2-verde.html">Linha 2-Verde</a></li>
-            <li><a href="sao-paulo/linha-3-vermelha.html">Linha 3-Vermelha</a></li>
-            <li><a href="sao-paulo/linha-4-amarela.html">Linha 4-Amarela</a></li>
-            <li><a href="sao-paulo/linha-5-lilas.html">Linha 5-Lilás</a></li>
-            <li><a href="sao-paulo/linha-15-prata.html">Linha 15-Prata</a></li>
-            <li><a href="sao-paulo/mapa-metro-e-cptm.html">Mapa Metro e CPTM</a></li>
-        </ul>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7Q7XMDD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="container" role="banner" aria-label="Topo do site">
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li aria-current="page">Início</li>
+      </ol>
     </nav>
+    <h1>Linhas de Metrô do Brasil</h1>
+  </header>
+
+  <main class="container" role="main">
+    <section class="hero">
+      <h1>🏙️ Linhas de Metrô do Brasil</h1>
+      <p>Bem-vindo ao Linhas de Metrô do Brasil, o guia mais completo sobre o transporte metroviário nas principais capitais do Brasil. Aqui você encontra mapas atualizados, horários, tarifas e dicas práticas para se locomover com facilidade em qualquer cidade brasileira que possua sistema de metrô.</p>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>🚇 Capitais com Metrô</h2>
+      <p>Explore as principais redes de metrô do Brasil:</p>
+      <ul class="city-list">
+        <li>
+          <a href="/metro-sao-paulo.html">Metrô de São Paulo</a>
+          <p>O maior e mais moderno do país, com múltiplas linhas interligadas.</p>
+        </li>
+        <li>
+          <a href="/metro-rio-de-janeiro.html">Metrô do Rio de Janeiro</a>
+          <p>Conectando zonas norte, sul e oeste com praticidade.</p>
+        </li>
+        <li>
+          <a href="/metro-belo-horizonte.html">Metrô de Belo Horizonte</a>
+          <p>Rápido e funcional, ligando o centro às principais regiões metropolitanas.</p>
+        </li>
+        <li>
+          <a href="/metro-brasilia.html">Metrô de Brasília</a>
+          <p>Integração entre Plano Piloto, Taguatinga e Samambaia.</p>
+        </li>
+        <li>
+          <a href="/metro-recife.html">Metrô de Recife</a>
+          <p>Rede eficiente com linhas Centro e Sul.</p>
+        </li>
+        <li>
+          <a href="/metro-salvador.html">Metrô de Salvador</a>
+          <p>Linhas modernas conectando a Lapa ao Aeroporto.</p>
+        </li>
+        <li>
+          <a href="/metro-fortaleza.html">Metrô de Fortaleza</a>
+          <p>Interligando áreas urbanas e suburbanas com linhas Sul e Oeste.</p>
+        </li>
+        <li>
+          <a href="/trensurb-porto-alegre.html">Trensurb de Porto Alegre</a>
+          <p>Sistema metropolitano que conecta Porto Alegre a cidades vizinhas.</p>
+        </li>
+      </ul>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>🗺️ Mapas e Linhas</h2>
+      <p>Veja os mapas atualizados e as linhas completas de cada cidade:</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Mapa das Linhas do Metrô de São Paulo</h3>
+          <p>Visualize todas as linhas e estações do maior sistema metroviário do Brasil.</p>
+          <a href="/mapa-metro-sao-paulo.html" class="btn">Ver Mapa</a>
+        </div>
+        <div class="card">
+          <h3>Mapa do Metrô do Rio de Janeiro</h3>
+          <p>Conheça as linhas e estações do metrô carioca.</p>
+          <a href="/mapa-metro-rio-de-janeiro.html" class="btn">Ver Mapa</a>
+        </div>
+        <div class="card">
+          <h3>Mapa Integrado do Metrô no Brasil</h3>
+          <p>Visão geral de todos os sistemas metroviários brasileiros.</p>
+          <a href="/mapas-metro.html" class="btn">Ver Mapas</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>💡 Guias e Dicas</h2>
+      <p>Aprenda a se locomover com eficiência nas principais capitais:</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Como usar o Metrô de São Paulo</h3>
+          <p>Guia completo para navegar pelo maior sistema de metrô do país.</p>
+          <a href="/como-usar-metro-sao-paulo.html" class="btn">Ler Guia</a>
+        </div>
+        <div class="card">
+          <h3>Horários de pico no Metrô do Rio</h3>
+          <p>Dicas para evitar congestionamentos e viajar com mais conforto.</p>
+          <a href="/horarios-pico-metro-rio.html" class="btn">Ver Horários</a>
+        </div>
+        <div class="card">
+          <h3>Dicas para turistas no Metrô de Recife</h3>
+          <p>Informações essenciais para visitantes da capital pernambucana.</p>
+          <a href="/dicas-turistas-metro-recife.html" class="btn">Ver Dicas</a>
+        </div>
+        <div class="card">
+          <h3>Integração entre Metrôs</h3>
+          <p>Como fazer conexões entre diferentes sistemas de transporte.</p>
+          <a href="/integracao-metros.html" class="btn">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>💰 Tarifas e Integrações</h2>
+      <p>Descubra quanto custa e como economizar nas suas viagens:</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Tabela de tarifas por cidade</h3>
+          <p>Compare os preços dos bilhetes em todas as capitais com metrô.</p>
+          <a href="/tarifas-metro.html" class="btn">Ver Tarifas</a>
+        </div>
+        <div class="card">
+          <h3>Integração entre metrôs, ônibus e trens</h3>
+          <p>Como usar a integração tarifária para economizar nas viagens.</p>
+          <a href="/integracao-tarifaria.html" class="btn">Entender Integração</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>📊 Comparativos e Curiosidades</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Comparativo entre os metrôs do Brasil</h3>
+          <p>Análise detalhada dos sistemas metroviários brasileiros.</p>
+          <a href="/comparativo-metros-brasil.html" class="btn">Ver Comparativo</a>
+        </div>
+        <div class="card">
+          <h3>Expansões e novas linhas</h3>
+          <p>Fique por dentro das obras e projetos em desenvolvimento.</p>
+          <a href="/expansoes-metro.html" class="btn">Ver Expansões</a>
+        </div>
+        <div class="card">
+          <h3>Curiosidades sobre transporte público</h3>
+          <p>Dados interessantes sobre o transporte nas capitais brasileiras.</p>
+          <a href="/curiosidades-metro.html" class="btn">Ver Curiosidades</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">⸻</div>
+
+    <section class="section">
+      <h2>🚀 Nossa missão</h2>
+      <p>Facilitar sua mobilidade urbana com informações confiáveis, atualizadas e acessíveis. Seja para o dia a dia ou para o turismo, o Linhas de Metrô do Brasil é o seu ponto de partida para chegar mais longe.</p>
+    </section>
+
+    <!-- FAQ opcional (ótimo para snippets) -->
+    <section aria-labelledby="faq-title">
+      <h2 id="faq-title">Perguntas frequentes sobre metrô no Brasil</h2>
+      <dl>
+        <dt>Quantas cidades brasileiras têm metrô?</dt>
+        <dd>Atualmente, 8 capitais brasileiras possuem sistema de metrô: São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Recife, Salvador, Fortaleza e Porto Alegre (Trensurb).</dd>
+        <dt>Qual é o maior sistema de metrô do Brasil?</dt>
+        <dd>O Metrô de São Paulo é o maior e mais extenso do país, com 6 linhas e mais de 90 estações, transportando milhões de passageiros diariamente.</dd>
+        <dt>Como funciona a integração tarifária entre metrô e ônibus?</dt>
+        <dd>A integração permite usar o mesmo bilhete para metrô e ônibus dentro de um período determinado (geralmente 3 horas), facilitando as conexões e reduzindo custos.</dd>
+        <dt>Os metrôs funcionam 24 horas no Brasil?</dt>
+        <dd>Não, a maioria dos metrôs brasileiros funciona das 4h40 às 24h nos dias úteis, com horários diferenciados nos fins de semana e feriados.</dd>
+      </dl>
+      <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Quantas cidades brasileiras têm metrô?","acceptedAnswer":{"@type":"Answer","text":"Atualmente, 8 capitais brasileiras possuem sistema de metrô: São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Recife, Salvador, Fortaleza e Porto Alegre (Trensurb)."}},
+          {"@type":"Question","name":"Qual é o maior sistema de metrô do Brasil?","acceptedAnswer":{"@type":"Answer","text":"O Metrô de São Paulo é o maior e mais extenso do país, com 6 linhas e mais de 90 estações, transportando milhões de passageiros diariamente."}},
+          {"@type":"Question","name":"Como funciona a integração tarifária entre metrô e ônibus?","acceptedAnswer":{"@type":"Answer","text":"A integração permite usar o mesmo bilhete para metrô e ônibus dentro de um período determinado (geralmente 3 horas), facilitando as conexões e reduzindo custos."}},
+          {"@type":"Question","name":"Os metrôs funcionam 24 horas no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Não, a maioria dos metrôs brasileiros funciona das 4h40 às 24h nos dias úteis, com horários diferenciados nos fins de semana e feriados."}}
+        ]
+      }
+      </script>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <nav aria-label="Links de rodapé">
+      <a class="btn" href="/metro-sao-paulo.html">Metrô SP</a>
+      <a class="btn" href="/metro-rio-de-janeiro.html">Metrô RJ</a>
+      <a class="btn" href="/metro-brasilia.html">Metrô DF</a>
+      <a class="btn" href="/horarios-metro.html">Horários</a>
+      <a class="btn" href="/tarifas-metro.html">Tarifas</a>
+      <a class="btn" href="/mapas-metro.html">Mapas</a>
+    </nav>
+    <p>&copy; <span id="year"></span> MetroBrasil - Informações sobre metrô no Brasil.</p>
+  </footer>
+
+  <script defer>
+    // JavaScript COMPLETO inline (não usar arquivos externos)
+    (function() {
+        'use strict';
+        
+        // Utilitários
+        const utils = {
+            debounce: function(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            },
+            throttle: function(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                };
+            }
+        };
+
+        // Smooth scroll para links internos
+        function initSmoothScroll() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        target.focus();
+                    }
+                });
+            });
+        }
+
+        // Inicialização
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+                return;
+            }
+            
+            initSmoothScroll();
+            
+            // Atualizar ano no footer
+            const yearElement = document.getElementById('year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+            
+            console.log('Página carregada com JavaScript inline');
+        }
+
+        init();
+    })();
+  </script>
 </body>
 </html>
