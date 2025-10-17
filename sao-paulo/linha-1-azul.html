@@ -201,58 +201,75 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
       padding: 2rem 0;
       overflow-x: auto;
+      min-height: 120px;
+    }
+
+    .line-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-width: 100%;
+      justify-content: space-between;
     }
 
     .line-track {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .station-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: relative;
-      height: 0.5rem;
-      background: linear-gradient(90deg, var(--primary), #1e40af);
-      border-radius: 0.25rem;
-      min-width: 100%;
+      z-index: 10;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .station-item:hover {
+      transform: scale(1.1);
     }
 
     .station-dot {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 1.5rem;
-      height: 1.5rem;
-      background: var(--primary);
-      border: 3px solid var(--primary-foreground);
+      width: 20px;
+      height: 20px;
+      background: #60a5fa;
+      border: 3px solid #ffffff;
       border-radius: 50%;
-      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 8px;
       transition: all 0.3s ease;
-      z-index: 10;
     }
 
-    .station-dot:hover {
-      transform: translateY(-50%) scale(1.2);
-      box-shadow: 0 4px 12px rgba(14, 58, 102, 0.3);
+    .station-item:hover .station-dot {
+      background: #3b82f6;
+      box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
     }
 
     .station-label {
-      position: absolute;
-      top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       font-weight: 500;
       color: var(--foreground);
+      text-align: center;
       white-space: nowrap;
-      background: var(--background);
-      padding: 0.25rem 0.5rem;
-      border-radius: 0.25rem;
-      box-shadow: var(--shadow);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      transform: rotate(-45deg);
+      transform-origin: center;
+      max-width: 80px;
+      line-height: 1.2;
     }
 
-    .station-dot:hover .station-label {
-      opacity: 1;
+    .station-item:hover .station-label {
+      color: var(--primary);
+      font-weight: 600;
     }
 
     .footer {
@@ -344,11 +361,33 @@
       
       .metro-line {
         padding: 1rem 0;
+        overflow-x: auto;
+      }
+      
+      .line-container {
+        min-width: 800px;
+        padding: 0 1rem;
       }
       
       .station-label {
-        font-size: 0.75rem;
-        top: 1.5rem;
+        font-size: 0.65rem;
+        max-width: 60px;
+      }
+      
+      .station-dot {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .line-container {
+        min-width: 1000px;
+      }
+      
+      .station-label {
+        font-size: 0.6rem;
+        max-width: 50px;
       }
     }
   </style>
@@ -423,7 +462,8 @@
       <div class="container">
         <h2>Esquema da Linha Azul</h2>
         <div class="metro-line">
-          <div class="line-track" style="width: 100%; position: relative;">
+          <div class="line-container">
+            <div class="line-track"></div>
             <!-- Estações serão adicionadas via JavaScript -->
           </div>
         </div>
@@ -531,20 +571,22 @@
 
     // Função para criar o esquema da linha
     function createLineScheme() {
-      const lineTrack = document.querySelector('.line-track');
-      const totalStations = stations.length;
+      const lineContainer = document.querySelector('.line-container');
       
-      stations.forEach((station, index) => {
+      stations.forEach((station) => {
+        const stationItem = document.createElement('div');
+        stationItem.className = 'station-item';
+        
         const stationDot = document.createElement('div');
         stationDot.className = 'station-dot';
-        stationDot.style.left = `${(index / (totalStations - 1)) * 100}%`;
         
         const stationLabel = document.createElement('div');
         stationLabel.className = 'station-label';
         stationLabel.textContent = station.name;
         
-        stationDot.appendChild(stationLabel);
-        lineTrack.appendChild(stationDot);
+        stationItem.appendChild(stationDot);
+        stationItem.appendChild(stationLabel);
+        lineContainer.appendChild(stationItem);
       });
     }
 
