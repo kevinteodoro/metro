@@ -1,11 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linha 5-Lilás - São Paulo - Metro</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#7e22ce" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5BDKKZ3');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Linha 5-Lilás do Metrô de São Paulo - Guia Completo</title>
+  <meta name="description" content="Guia da Linha 5-Lilás do Metrô de São Paulo: estações, integrações, horários e o que fazer em cada parada." />
+  <meta name="keywords" content="linha 5 lilás metrô são paulo, linha lilás sp, metrô sp, estações linha 5, capão redondo chácara klabin" />
+  <meta name="author" content="Guia Metrô SP" />
+
+  <link rel="canonical" href="https://www.metrobrasil.com.br/sao-paulo/linha-5-lilas.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Linha 5-Lilás do Metrô de São Paulo - Guia Completo de Estações" />
+  <meta property="og:description" content="Guia completo da Linha 5-Lilás: estações, integrações, horários e atrações próximas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.metrobrasil.com.br/sao-paulo/linha-5-lilas.html" />
+  <meta property="og:image" content="https://www.metrobrasil.com.br/img/og-metro-linha-5-lilas.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Linha 5-Lilás do Metrô de São Paulo - Guia Completo" />
+  <meta name="twitter:description" content="Estações, integrações, horários e o que fazer em cada parada da Linha 5-Lilás" />
+  <meta name="twitter:image" content="https://www.metrobrasil.com.br/img/og-metro-linha-5-lilas.jpg" />
+
+  <style>
+    :root {
+      --primary: #7e22ce; /* lilás */
+      --primary-foreground: #ffffff;
+      --secondary: #f8fafc;
+      --background: #ffffff;
+      --foreground: #0f172a;
+      --muted: #64748b;
+      --muted-foreground: #94a3b8;
+      --border: #e2e8f0;
+      --radius: 0.5rem;
+      --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --station-dot-size: 20px;
+      --station-dot-border: 3px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { line-height: 1.5; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: var(--foreground); background: var(--background); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, var(--primary) 0%, #7e22ce 100%); color: var(--primary-foreground); padding: 3rem 0; }
+    .hero-content { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .hero-icon { width: 2.5rem; height: 2.5rem; flex-shrink: 0; }
+    .hero h1 { font-size: 1.875rem; font-weight: 700; text-align: center; line-height: 1.1; margin: 0; }
+    .hero-subtitle { font-size: 1.125rem; text-align: center; color: rgba(255,255,255,.9); font-weight: 500; margin-bottom: 2rem; }
+    .hero-description { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,.95); max-width: none; text-align: justify; }
+    .hero-description p { margin-bottom: 1rem; }
+    .hero-description p:last-child { margin-bottom: 0; }
+    .hero-description strong { font-weight: 600; }
+    @media (min-width: 768px) { .hero { padding: 4rem 0; } .hero-icon { width: 3rem; height: 3rem; } .hero h1 { font-size: 3rem; } .hero-subtitle { font-size: 1.25rem; } }
+    @media (min-width: 1024px) { .hero h1 { font-size: 3.75rem; } }
+
+    /* Sections */
+    .section { padding: 3rem 0; }
+    .section:nth-child(even) { background: var(--secondary); }
+    .section h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: var(--foreground); }
+    .section h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: var(--foreground); }
+
+    /* Grid */
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    /* Cards */
+    .card { background: var(--background); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); transition: all .3s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .station-card { padding: 1.5rem; overflow: hidden; transition: all .3s ease; scroll-margin-top: 6rem; }
+    .station-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+    .station-header { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .75rem; }
+    .station-icon { width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #7e22ce, #7e22ce); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .station-icon svg { width: 1.25rem; height: 1.25rem; color: var(--primary-foreground); }
+    .station-info h3 { font-size: 1.25rem; font-weight: 700; color: var(--foreground); margin: 0; }
+    @media (min-width: 768px) { .station-info h3 { font-size: 1.5rem; } }
+    .station-info p { color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* Metro line */
+    .metro-line { display: flex; align-items: center; justify-content: flex-start; padding: 3rem 0; overflow-x: auto; min-height: 180px; scrollbar-width: thin; scrollbar-color: var(--primary) var(--secondary); scroll-behavior: smooth; }
+    @media (min-width: 768px) { .metro-line { justify-content: center; } }
+    .metro-line::-webkit-scrollbar { height: 8px; }
+    .metro-line::-webkit-scrollbar-track { background: var(--secondary); }
+    .metro-line::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+    .metro-line .line-container { justify-content: center; }
+    .line-container { display: inline-flex; align-items: flex-start; position: relative; width: auto; justify-content: flex-start; height: 100px; gap: 5px; padding: 0 2rem; min-width: max-content; }
+    .line-track { position: absolute; top: 4px; left: 12px; right: 12px; height: 8px; background: linear-gradient(90deg, #7e22ce, #7e22ce); border-radius: 4px; z-index: 1; }
+    .station-item { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 10; cursor: pointer; transition: all .3s ease; margin-right: 5px; background: none; border: none; padding: 0; outline: none; box-shadow: none; }
+    .station-item:last-child { margin-right: 0; }
+    .station-item:hover { transform: scale(1.1); }
+    .station-dot { width: 24px; height: 24px; background: var(--primary); border: 4px solid #ffffff; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,.1); transition: all .3s ease; position: relative; top: -4px; display: block; }
+    .station-item:hover .station-dot { width: 32px; height: 32px; background: var(--primary); border-color: rgba(255,255,255,.8); box-shadow: 0 4px 8px rgba(126,34,206,.3); }
+    .station-label { position: absolute; top: 1rem; right: .75rem; font-size: .75rem; font-weight: 500; color: var(--foreground); white-space: nowrap; transform-origin: bottom right; transform: rotate(-45deg); transition: color .3s ease; }
+    .station-item:hover .station-label { color: var(--primary); }
+
+    @media (max-width: 767px) {
+      .metro-line { padding: 2rem 0; min-height: 150px; }
+      .line-container { padding: 0 1rem; gap: 3px; }
+      .station-label { font-size: .7rem; top: .8rem; right: .5rem; }
+      .station-dot { width: 20px; height: 20px; border: 3px solid #ffffff; }
+      .station-item:hover .station-dot { width: 28px; height: 28px; }
+    }
+    @media (min-width: 768px) { .station-label { font-size: .875rem; } }
+
+    /* Footer */
+    .footer { background: var(--primary); color: var(--primary-foreground); padding: 3rem 0; margin-top: 4rem; }
+    .footer h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+    .footer p { opacity: .9; margin-bottom: 1rem; }
+    .footer ul { list-style: none; }
+    .footer li { margin-bottom: .75rem; }
+    .footer a { color: var(--primary-foreground); text-decoration: none; display: flex; align-items: center; gap: .5rem; transition: opacity .3s ease; }
+    .footer a:hover { opacity: .8; }
+    .footer-icon { width: 1rem; height: 1rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.2); padding-top: 2rem; margin-top: 2rem; text-align: center; }
+    .footer-bottom p { font-size: .875rem; opacity: .7; }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Linha 5-Lilás do Metrô de São Paulo",
+    "url": "https://www.metrobrasil.com.br/sao-paulo/linha-5-lilas.html",
+    "description": "Guia completo da Linha 5-Lilás do Metrô de São Paulo: estações, integrações, horários e atrações próximas.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.metrobrasil.com.br/"},
+        {"@type": "ListItem", "position": 2, "name": "Metrô São Paulo", "item": "https://www.metrobrasil.com.br/metro-sao-paulo.html"},
+        {"@type": "ListItem", "position": 3, "name": "Linha 5 Lilás", "item": "https://www.metrobrasil.com.br/sao-paulo/linha-5-lilas.html"}
+      ]
+    },
+    "mainEntity": {
+      "@type": "TransportationRoute",
+      "name": "Linha 5-Lilás do Metrô de São Paulo",
+      "description": "Liga Capão Redondo (Sudoeste) a Chácara Klabin (Sudeste) com integrações importantes",
+      "numberOfStops": 17,
+      "routeLength": "20.1 km",
+      "operatedBy": { "@type": "Organization", "name": "ViaMobilidade / Metrô de São Paulo" },
+      "startLocation": { "@type": "Place", "name": "Capão Redondo" },
+      "endLocation": { "@type": "Place", "name": "Chácara Klabin" }
+    }
+  }
+  </script>
 </head>
 <body>
-    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BDKKZ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="16" height="16" x="4" y="3" rx="2"></rect>
+          <path d="M4 11h16"></path>
+          <path d="M12 3v8"></path>
+          <path d="m8 19-2 3"></path>
+          <path d="m18 22-2-3"></path>
+          <path d="M8 15h.01"></path>
+          <path d="M16 15h.01"></path>
+        </svg>
+        <h1>Linha Lilás do Metrô de São Paulo</h1>
+      </div>
+      <p class="hero-subtitle">Linha 5-Lilás: mapa, estações, integrações, horários e atrações próximas</p>
+      <div class="hero-description">
+        <p>A <strong>Linha 5-Lilás</strong> liga <strong>Capão Redondo</strong> à <strong>Chácara Klabin</strong>, conectando bairros da Zona Sul à malha do metrô com integrações para as linhas Azul, Verde e a CPTM.</p>
+        <p>Com 17 estações, atende regiões residenciais e centros comerciais importantes. O trajeto completo leva cerca de 35–40 minutos.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Esquema da Linha Lilás</h2>
+        <div class="metro-line">
+          <div class="line-container">
+            <div class="line-track"></div>
+            <!-- Estações serão adicionadas via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>O que fazer em cada estação da Linha Lilás</h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          Descubra atrações, pontos turísticos e dicas do que visitar próximo a cada parada do metrô
+        </p>
+        <div class="grid grid-3" id="stations-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-2">
+        <div>
+          <h3>Links Úteis</h3>
+          <p>Informações oficiais sobre a Linha 5-Lilás do Metrô de São Paulo</p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="https://www.metro.sp.gov.br/" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+                Site oficial do Metrô de São Paulo
+              </a>
+            </li>
+            <li>
+              <a href="https://www.metro.sp.gov.br/tarifas/" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Tarifas e horários atualizados
+              </a>
+            </li>
+            <li>
+              <a href="https://www.metro.sp.gov.br/sua-viagem/normas-de-utilizacao/" target="_blank" rel="noopener noreferrer">
+                <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="4" r="2"></circle>
+                  <circle cx="18" cy="8" r="2"></circle>
+                  <circle cx="20" cy="16" r="2"></circle>
+                  <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path>
+                </svg>
+                Regras de transporte de animais e bicicletas
+              </a>
+            </li>
+          </ul>
+          <h3 style="margin-top:1.5rem">Outras linhas</h3>
+          <ul>
+            <li><a href="/sao-paulo/linha-1-azul.html">Linha 1-Azul</a></li>
+            <li><a href="/sao-paulo/linha-2-verde.html">Linha 2-Verde</a></li>
+            <li><a href="/sao-paulo/linha-3-vermelha.html">Linha 3-Vermelha</a></li>
+            <li><a href="/sao-paulo/linha-4-amarela.html">Linha 4-Amarela</a></li>
+            <li><a href="/sao-paulo/linha-5-lilas.html">Linha 5-Lilás</a></li>
+            <li><a href="/sao-paulo/linha-6-laranja.html">Linha 6-Laranja</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Guia Linha Lilás Metrô SP - Informações sobre a Linha 5-Lilás do Metrô de São Paulo</p>
+        <p>Este é um guia informativo não oficial. Para informações oficiais, visite o site do Metrô de São Paulo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Estações da Linha 5-Lilás
+    const stations = [
+      { name: "Capão Redondo", description: "Terminal sudoeste da linha; região residencial com comércio local e terminais de ônibus." },
+      { name: "Campo Limpo", description: "Acesso a shoppings, comércio e serviços da Zona Sul." },
+      { name: "Vila das Belezas", description: "Bairro residencial com praças e comércio de bairro." },
+      { name: "Giovanni Gronchi", description: "Região com centros empresariais e acesso a corredores viários." },
+      { name: "Santo Amaro", description: "Integração com CPTM (Linha 9); polo comercial e gastronômico." },
+      { name: "Largo Treze", description: "Centro comercial de Santo Amaro; ruas de comércio popular." },
+      { name: "Adolfo Pinheiro", description: "Região residencial com serviços e equipamentos públicos." },
+      { name: "Alto da Boa Vista", description: "Bairro arborizado, escolas e vias residenciais." },
+      { name: "Borba Gato", description: "Acesso a centros comerciais e escritórios na Zona Sul." },
+      { name: "Brooklin", description: "Região empresarial com edifícios corporativos e hotéis." },
+      { name: "Campo Belo", description: "Bairro residencial com comércio local; futura integração com Linha 17-Ouro." },
+      { name: "Eucaliptos", description: "Acesso ao Shopping Ibirapuera e áreas comerciais de Moema." },
+      { name: "Moema", description: "Bairro com vasta oferta gastronômica e ciclovias; próximo ao Parque Ibirapuera (via conexões)." },
+      { name: "AACD-Servidor", description: "Próximo a hospitais e centros de saúde; região de serviços." },
+      { name: "Hospital São Paulo", description: "Área hospitalar e universitária; acesso à UNIFESP." },
+      { name: "Santa Cruz", description: "Integra com Linha 1-Azul; acesso à Av. Domingos de Morais e shoppings." },
+      { name: "Chácara Klabin", description: "Integra com Linha 2-Verde; bairro residencial tranquilo e bem servido." }
+    ];
+
+    // Esquema da linha
+    function createLineScheme() {
+      const lineContainer = document.querySelector('.line-container');
+      stations.forEach((station) => {
+        const stationItem = document.createElement('button');
+        stationItem.className = 'station-item group';
+        stationItem.setAttribute('aria-label', `Ir para estação ${station.name}`);
+        const stationDot = document.createElement('div');
+        stationDot.className = 'station-dot';
+        const stationLabel = document.createElement('span');
+        stationLabel.className = 'station-label';
+        stationLabel.textContent = station.name;
+        stationItem.addEventListener('click', () => {
+          scrollToStation(`station-${station.name.toLowerCase().replace(/\s+/g, '-')}`);
+        });
+        stationItem.appendChild(stationDot);
+        stationItem.appendChild(stationLabel);
+        lineContainer.appendChild(stationItem);
+      });
+    }
+
+    // Scroll automático
+    function autoScrollToCenter() {
+      const metroLine = document.querySelector('.metro-line');
+      if (metroLine) {
+        if (window.innerWidth <= 767) { metroLine.scrollLeft = 0; }
+        else { const scrollLeft = (metroLine.scrollWidth - metroLine.clientWidth) / 2; metroLine.scrollLeft = scrollLeft; }
+      }
+    }
+
+    // Scroll suave para card
+    function scrollToStation(stationId) {
+      const element = document.getElementById(stationId);
+      if (element) { element.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    }
+
+    // Cards das estações
+    function createStationCards() {
+      const stationsGrid = document.getElementById('stations-grid');
+      stations.forEach(station => {
+        const card = document.createElement('div');
+        card.className = 'card station-card';
+        card.id = `station-${station.name.toLowerCase().replace(/\s+/g, '-')}`;
+        card.innerHTML = `
+          <div class=\"station-header\">
+            <div class=\"station-icon\">
+              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                <path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"></path>
+                <circle cx=\"12\" cy=\"10\" r=\"3\"></circle>
+              </svg>
+            </div>
+            <div class=\"station-info\"><h3>${station.name}</h3></div>
+          </div>
+          <div class=\"station-info\"><p>${station.description}</p></div>
+        `;
+        stationsGrid.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      createLineScheme();
+      createStationCards();
+      setTimeout(() => { autoScrollToCenter(); }, 100);
+    });
+  </script>
 </body>
 </html>

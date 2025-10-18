@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#065f46" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5BDKKZ3');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Linha 9-Esmeralda (CPTM) - Estações, mapa e integrações</title>
+  <meta name="description" content="Guia da Linha 9-Esmeralda da CPTM: mapa, estações de Osasco a Varginha, integrações e o que fazer perto de cada parada." />
+  <meta name="keywords" content="linha 9 esmeralda, cptm linha 9, trem sp, osasco pinheiros grajaú mendes varginha" />
+  <meta name="author" content="Guia Metrô/CPTM SP" />
+
+  <link rel="canonical" href="https://www.metrobrasil.com.br/sao-paulo/linha-9-esmeralda.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Linha 9-Esmeralda (CPTM) - Guia Completo" />
+  <meta property="og:description" content="Mapa, estações, integrações e atrações próximas na Linha 9-Esmeralda (Osasco ↔ Varginha)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.metrobrasil.com.br/sao-paulo/linha-9-esmeralda.html" />
+  <meta property="og:image" content="https://www.metrobrasil.com.br/img/og-cptm-linha-9-esmeralda.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Linha 9-Esmeralda (CPTM) - Guia Completo" />
+  <meta name="twitter:description" content="Tudo sobre a Linha 9-Esmeralda: mapa, estações e integrações (Osasco ↔ Varginha)." />
+  <meta name="twitter:image" content="https://www.metrobrasil.com.br/img/og-cptm-linha-9-esmeralda.jpg" />
+
+  <style>
+    :root {
+      --primary: #065f46; /* esmeralda (verde escuro) */
+      --primary-foreground: #ffffff;
+      --secondary: #f8fafc;
+      --background: #ffffff;
+      --foreground: #0f172a;
+      --muted: #64748b;
+      --muted-foreground: #94a3b8;
+      --border: #e2e8f0;
+      --radius: 0.5rem;
+      --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --station-dot-size: 20px;
+      --station-dot-border: 3px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { line-height: 1.5; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: var(--foreground); background: var(--background); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+    .hero { background: linear-gradient(135deg, var(--primary) 0%, #065f46 100%); color: var(--primary-foreground); padding: 3rem 0; }
+    .hero-content { display: flex; align-items: center; justify-content: center; gap: .75rem; margin-bottom: 1.5rem; }
+    .hero-icon { width: 2.5rem; height: 2.5rem; flex-shrink: 0; }
+    .hero h1 { font-size: 1.875rem; font-weight: 700; text-align: center; line-height: 1.1; margin: 0; }
+    .hero-subtitle { font-size: 1.125rem; text-align: center; color: rgba(255,255,255,.9); font-weight: 500; margin-bottom: 2rem; }
+    .hero-description { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,.95); text-align: justify; }
+    .hero-description p { margin-bottom: 1rem; }
+    .hero-description strong { font-weight: 600; }
+    @media (min-width: 768px) { .hero { padding: 4rem 0; } .hero-icon { width: 3rem; height: 3rem; } .hero h1 { font-size: 3rem; } .hero-subtitle { font-size: 1.25rem; } }
+    @media (min-width: 1024px) { .hero h1 { font-size: 3.75rem; } }
+
+    .section { padding: 3rem 0; }
+    .section:nth-child(even) { background: var(--secondary); }
+    .section h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: var(--foreground); }
+
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    .card { background: var(--background); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); transition: all .3s ease; }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .station-card { padding: 1.5rem; overflow: hidden; transition: all .3s ease; scroll-margin-top: 6rem; }
+    .station-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+    .station-header { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .75rem; }
+    .station-icon { width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #065f46, #065f46); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .station-icon svg { width: 1.25rem; height: 1.25rem; color: var(--primary-foreground); }
+    .station-info h3 { font-size: 1.25rem; font-weight: 700; color: var(--foreground); margin: 0; }
+    @media (min-width: 768px) { .station-info h3 { font-size: 1.5rem; } }
+    .station-info p { color: var(--muted); line-height: 1.6; margin: 0; }
+
+    .metro-line { display: flex; align-items: center; justify-content: flex-start; padding: 3rem 0; overflow-x: auto; min-height: 180px; scrollbar-width: thin; scrollbar-color: var(--primary) var(--secondary); scroll-behavior: smooth; }
+    @media (min-width: 768px) { .metro-line { justify-content: center; } }
+    .metro-line::-webkit-scrollbar { height: 8px; }
+    .metro-line::-webkit-scrollbar-track { background: var(--secondary); }
+    .metro-line::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+    .line-container { display: inline-flex; align-items: flex-start; position: relative; width: auto; justify-content: flex-start; height: 100px; gap: 5px; padding: 0 2rem; min-width: max-content; }
+    .line-track { position: absolute; top: 4px; left: 12px; right: 12px; height: 8px; background: linear-gradient(90deg, #065f46, #065f46); border-radius: 4px; z-index: 1; }
+    .station-item { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 10; cursor: pointer; transition: all .3s ease; margin-right: 5px; background: none; border: none; padding: 0; }
+    .station-item:last-child { margin-right: 0; }
+    .station-dot { width: 24px; height: 24px; background: var(--primary); border: 4px solid #ffffff; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,.1); position: relative; top: -4px; transition: all .3s ease; display: block; }
+    .station-item:hover .station-dot { width: 32px; height: 32px; }
+    .station-label { position: absolute; top: 1rem; right: .75rem; font-size: .75rem; font-weight: 500; color: var(--foreground); white-space: nowrap; transform-origin: bottom right; transform: rotate(-45deg); transition: color .3s ease; }
+    .station-item:hover .station-label { color: var(--primary); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Linha 9-Esmeralda da CPTM",
+    "url": "https://www.metrobrasil.com.br/sao-paulo/linha-9-esmeralda.html",
+    "description": "Guia da Linha 9-Esmeralda da CPTM: mapa, estações e integrações (Osasco ↔ Varginha).",
+    "breadcrumb": {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Início","item":"https://www.metrobrasil.com.br/"},
+      {"@type":"ListItem","position":2,"name":"Trens Metropolitanos SP","item":"https://www.metrobrasil.com.br/metro-sao-paulo.html"},
+      {"@type":"ListItem","position":3,"name":"Linha 9 Esmeralda","item":"https://www.metrobrasil.com.br/sao-paulo/linha-9-esmeralda.html"}
+    ]},
+    "mainEntity": {"@type":"TransportationRoute","name":"Linha 9-Esmeralda","description":"Osasco ↔ Varginha (via Pinheiros, Santo Amaro e Grajaú)","numberOfStops":20,"routeLength":"~43 km","operatedBy":{"@type":"Organization","name":"ViaMobilidade Trens / CPTM"},"startLocation":{"@type":"Place","name":"Osasco"},"endLocation":{"@type":"Place","name":"Varginha"}}
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BDKKZ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="3" rx="2"></rect><path d="M4 11h16"></path><path d="M12 3v8"></path><path d="m8 19-2 3"></path><path d="m18 22-2-3"></path><path d="M8 15h.01"></path><path d="M16 15h.01"></path></svg>
+        <h1>Linha Esmeralda da CPTM (Linha 9)</h1>
+      </div>
+      <p class="hero-subtitle">Linha 9-Esmeralda (Osasco ↔ Varginha): mapa, estações e integrações</p>
+      <div class="hero-description">
+        <p>A <strong>Linha 9-Esmeralda</strong> percorre a margem do Rio Pinheiros, conectando polos empresariais (Faria Lima, Berrini), a <strong>Av. Nações Unidas</strong> e bairros da zona sul até <strong>Varginha</strong>.</p>
+        <p>Veja abaixo o esquema com as estações e um guia do que encontrar nas principais paradas.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Esquema da Linha Esmeralda</h2>
+        <div class="metro-line"><div class="line-container"><div class="line-track"></div></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>O que fazer em cada estação da Linha 9-Esmeralda</h2>
+        <p style="text-align:center;color:var(--muted);margin-bottom:3rem;max-width:700px;margin-inline:auto">Lista de estações com destaques e integrações próximas.</p>
+        <div class="grid grid-3" id="stations-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-2">
+        <div>
+          <h3>Links Úteis</h3>
+          <p>Informações oficiais sobre a Linha 9-Esmeralda</p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="https://www.cptm.sp.gov.br/Pages/Linhas.aspx" target="_blank" rel="noopener noreferrer">Linhas, horários e serviços (CPTM)</a></li>
+          </ul>
+          <h3 style="margin-top:1.5rem">Outras linhas</h3>
+          <ul>
+            <li><a href="/sao-paulo/linha-7-rubi.html">Linha 7-Rubi (CPTM)</a></li>
+            <li><a href="/sao-paulo/linha-8-diamante.html">Linha 8-Diamante (CPTM)</a></li>
+            <li><a href="/sao-paulo/linha-9-esmeralda.html">Linha 9-Esmeralda (CPTM)</a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Guia Linhas SP - Linha 9-Esmeralda</p><p>Guia informativo não oficial. Consulte a CPTM para dados oficiais.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const stations = [
+      { name: "Osasco", description: "Centro regional, shoppings e integrações." },
+      { name: "Presidente Altino", description: "Entrocamento operacional entre linhas." },
+      { name: "Ceasa", description: "Próximo ao entreposto e área comercial." },
+      { name: "Vila Lobos–Jaguaré", description: "Parque Villa-Lobos e região universitária." },
+      { name: "Cidade Universitária", description: "USP e complexo universitário." },
+      { name: "Pinheiros", description: "Integração com metrô; bares e vida noturna." },
+      { name: "Hebraica–Rebouças", description: "Clubes e centros esportivos." },
+      { name: "Cidade Jardim", description: "Shopping Cidade Jardim e eixos empresariais." },
+      { name: "Vila Olímpia", description: "Polo corporativo; restaurantes e hotéis." },
+      { name: "Berrini", description: "Centro financeiro da Av. Berrini." },
+      { name: "Morumbi", description: "Área corporativa e estádios (via conexões)." },
+      { name: "Granja Julieta", description: "Bairro residencial arborizado." },
+      { name: "Santo Amaro", description: "Integrações com metrô e corredor de ônibus." },
+      { name: "Socorro", description: "Acesso à Represa de Guarapiranga." },
+      { name: "Jurubatuba", description: "Parques e centros comerciais." },
+      { name: "Autódromo", description: "Autódromo de Interlagos (via conexões)." },
+      { name: "Interlagos", description: "Bairro com comércio e serviços." },
+      { name: "Grajaú", description: "Terminal integrado; comércio local." },
+      { name: "Mendes–Vila Natal", description: "Expansão recente; bairros residenciais." },
+      { name: "Varginha", description: "Terminal sul em expansão." }
+    ];
+
+    function createLineScheme(){
+      const lineContainer=document.querySelector('.line-container');
+      stations.forEach(station=>{
+        const el=document.createElement('button');
+        el.className='station-item group';
+        el.setAttribute('aria-label',`Ir para estação ${station.name}`);
+        const dot=document.createElement('div'); dot.className='station-dot';
+        const label=document.createElement('span'); label.className='station-label'; label.textContent=station.name;
+        el.addEventListener('click',()=>{scrollToStation(`station-${station.name.toLowerCase().replace(/\s+/g,'-')}`)});
+        el.appendChild(dot); el.appendChild(label); lineContainer.appendChild(el);
+      });
+    }
+    function autoScrollToCenter(){ const ml=document.querySelector('.metro-line'); if(ml){ if(window.innerWidth<=767){ ml.scrollLeft=0; } else { ml.scrollLeft=(ml.scrollWidth-ml.clientWidth)/2; } } }
+    function scrollToStation(id){ const el=document.getElementById(id); if(el){ el.scrollIntoView({behavior:'smooth', block:'center'}); } }
+    function createStationCards(){
+      const grid=document.getElementById('stations-grid');
+      stations.forEach(station=>{
+        const card=document.createElement('div'); card.className='card station-card'; card.id=`station-${station.name.toLowerCase().replace(/\s+/g,'-')}`;
+        card.innerHTML=`<div class=\"station-header\"><div class=\"station-icon\">\
+        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\
+        <path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg></div>\
+        <div class=\"station-info\"><h3>${station.name}</h3></div></div><div class=\"station-info\"><p>${station.description}</p></div>`;
+        grid.appendChild(card);
+      });
+    }
+    document.addEventListener('DOMContentLoaded',()=>{ createLineScheme(); createStationCards(); setTimeout(autoScrollToCenter,100); });
+  </script>
+</body>
+</html>
+
