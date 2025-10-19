@@ -39,7 +39,7 @@
    - **SEMPRE** incluir o snippet do GTM em TODAS as páginas criadas.
    - **Código no `<head>`**: antes do `</head>`, logo após as meta tags.
    - **Código após `<body>`**: logo após a abertura da tag `<body>`.
-   - **ID do container**: usar `	GTM-K5BDKKZ3` (será rotacionado por segurança).
+   - **ID do container**: usar `GTM-K5BDKKZ3` (padronizado em todas as páginas).
    - **Posicionamento**: GTM deve ser o primeiro script no head e o primeiro elemento no body.
    - **Fallback**: incluir sempre o código noscript para usuários sem JavaScript.
 
@@ -77,7 +77,7 @@
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','	GTM-K5BDKKZ3');</script>
+  })(window,document,'script','dataLayer','GTM-K5BDKKZ3');</script>
   <!-- End Google Tag Manager -->
 
   <title><!-- 55–60c: Título com keyword foco --></title>
@@ -137,7 +137,7 @@
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=	GTM-K5BDKKZ3"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BDKKZ3"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 

@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Metrô e CPTM São Paulo - Linhas e Guias</title>
   <meta name="description" content="Guia das linhas do Metrô e CPTM de São Paulo: mapas, estações, integrações e dicas de cada linha." />
+  <link rel="canonical" href="https://transporte.wiki.br/sao-paulo/index.html" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5BDKKZ3');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Metrô e CPTM São Paulo - Linhas e Guias" />
+  <meta property="og:description" content="Explore todas as linhas do Metrô e CPTM de São Paulo: mapas, estações, integrações e dicas." />
+  <meta property="og:url" content="https://transporte.wiki.br/sao-paulo/index.html" />
+  <meta property="og:image" content="https://transporte.wiki.br/images/Mapa-metro-cptm-sp-optimized.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Metrô e CPTM São Paulo - Linhas e Guias" />
+  <meta name="twitter:description" content="Explore todas as linhas do Metrô e CPTM de São Paulo: mapas, estações, integrações e dicas." />
+  <meta name="twitter:image" content="https://transporte.wiki.br/images/Mapa-metro-cptm-sp-optimized.jpg" />
   <style>
     :root { --bg:#fff; --fg:#0f172a; --muted:#64748b; --card:#ffffff; --border:#e2e8f0; --radius:.75rem }
     * { box-sizing:border-box }
@@ -19,13 +41,49 @@
     .muted { color: var(--muted); font-size:.9rem; margin-top:.25rem }
     .section { margin-top: 2rem }
     .banner { margin-bottom: 2rem; text-align: center }
-    .banner-image { max-width: 100%; height: auto; border-radius: var(--radius); box-shadow: 0 4px 6px rgba(0,0,0,0.1) }
+    .banner-image { 
+      max-width: 100%; 
+      height: auto; 
+      border-radius: var(--radius); 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: opacity 0.3s ease;
+    }
+    
+    /* Lazy loading optimization */
+    img[loading="lazy"] {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    img[loading="lazy"].loaded {
+      opacity: 1;
+    }
+    
+    /* Intersection Observer fallback */
+    .banner-image {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+    
+    @keyframes loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
   </style>
 </head>
 <body>
   <main class="container">
     <div class="banner">
-      <img src="/images/Mapa-metro-cptm-sp.png" alt="Mapa do Metrô e CPTM de São Paulo" class="banner-image">
+      <img src="../images/Mapa-metro-cptm-sp-optimized.jpg" 
+           srcset="../images/Mapa-metro-cptm-sp-mobile.jpg 800w, ../images/Mapa-metro-cptm-sp-optimized.jpg 1200w"
+           sizes="(max-width: 800px) 100vw, 1200px"
+           alt="Mapa do Metrô e CPTM de São Paulo" 
+           class="banner-image" 
+           width="1068" 
+           height="835"
+           loading="lazy"
+           decoding="async">
     </div>
     
     <h1>Linhas do Metrô e CPTM de São Paulo</h1>
@@ -52,6 +110,268 @@
         
       </div>
     </section>
+  
+  <!-- Conteúdo adicional para SEO -->
+  <section class="section" id="sobre-as-linhas">
+    <h2>Como funcionam as linhas do Metrô e da CPTM</h2>
+    <p>O sistema de transporte sobre trilhos da Grande São Paulo é composto pelo <strong>Metrô</strong> (linhas 1 a 6) e pela <strong>CPTM</strong> (linhas 7 a 9, além de outras sob concessão). As linhas estão integradas entre si por estações de conexão estratégicas, permitindo ao passageiro atravessar a cidade com rapidez e previsibilidade. No Metrô, os trens circulam em vias segregadas e com intervalos reduzidos, enquanto na CPTM parte das linhas compartilha corredores com trens metropolitanos.</p>
+  </section>
+
+  <section class="section" id="historia">
+    <h2>História do Metrô de São Paulo</h2>
+    <p>A rede metroviária paulistana começou a operar em <strong>1974</strong>, com o primeiro trecho da <strong>Linha 1-Azul</strong> (Jabaquara ↔ Vila Mariana). Ao longo das décadas, novas expansões conectaram a Zona Sul ao Centro e à Zona Norte (até <strong>Tucuruvi</strong>), além da criação da <strong>Linha 2-Verde</strong> (Vila Madalena ↔ Vila Prudente), <strong>Linha 3-Vermelha</strong> (Barra Funda ↔ Itaquera) e, posteriormente, a <strong>Linha 4-Amarela</strong>, <strong>Linha 5-Lilás</strong> e <strong>Linha 6-Laranja</strong> (em implantação). Esse crescimento acompanhou a urbanização, encurtando tempos de deslocamento e oferecendo maior integração com ônibus e trens metropolitanos.</p>
+  </section>
+
+  <section class="section" id="tarifas">
+    <h2>Tarifas e formas de pagamento</h2>
+    <p>A tarifa unitária do Metrô de São Paulo é <strong>atualmente R$ 5,00</strong> (sujeita a atualizações oficiais). É possível pagar com <strong>bilhete unitário</strong>, <strong>cartões pré-pagos</strong> e meios digitais habilitados nas bilheterias e máquinas de autoatendimento. Integrações com ônibus municipais e trens da CPTM podem oferecer desconto dentro das regras vigentes do sistema tarifário unificado.</p>
+  </section>
+
+  <section class="section" id="horarios">
+    <h2>Horários de funcionamento</h2>
+    <p>Em geral, as estações do Metrô operam entre <strong>4h40 e 0h</strong> (meia-noite), com variações por linha e por estação. Em alguns dias, principalmente <strong>sextas-feiras e sábados</strong>, podem ocorrer <strong>operações estendidas</strong> para atender eventos e demandas específicas. Consulte sempre os avisos nas estações ou os canais oficiais para horários atualizados.</p>
+  </section>
+
+  <section class="section" id="integracoes">
+    <h2>Integrações entre linhas</h2>
+    <p>As principais integrações entre linhas do Metrô e CPTM acontecem em estações como <strong>Sé</strong> (Linhas 1 e 3), <strong>Paraíso</strong> (Linhas 1 e 2), <strong>Ana Rosa</strong> (Linhas 1 e 2), <strong>Luz</strong> (Linhas 1, 4 e CPTM), entre outras. Essas conexões reduzem baldeações de superfície e concentram o fluxo em plataformas planejadas para alta demanda.</p>
+  </section>
+
+  <section class="section" id="curiosidades">
+    <h2>Curiosidades e dicas úteis</h2>
+    <ul>
+      <li><strong>Pontualidade</strong>: intervalos menores no pico e operação controlada por centros de controle integrados.</li>
+      <li><strong>Acessibilidade</strong>: elevadores, sinalização tátil e áreas reservadas em trens e plataformas.</li>
+      <li><strong>Segurança</strong>: câmeras e equipes treinadas nas estações; siga a faixa amarela nas plataformas.</li>
+      <li><strong>Turismo</strong>: estações como <strong>Luz</strong>, <strong>São Bento</strong> e <strong>Paulista</strong>/<strong>Consolação</strong> dão acesso a museus, centros históricos e à Av. Paulista.</li>
+    </ul>
+  </section>
   </main>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5BDKKZ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- JSON-LD WebPage + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Metrô e CPTM São Paulo - Linhas e Guias",
+    "url": "https://transporte.wiki.br/sao-paulo/index.html",
+    "description": "Guia das linhas do Metrô e CPTM de São Paulo: mapas, estações, integrações e dicas.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://transporte.wiki.br/" },
+        { "@type": "ListItem", "position": 2, "name": "São Paulo", "item": "https://transporte.wiki.br/sao-paulo/index.html" }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qual é o preço do bilhete do Metrô de São Paulo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A tarifa unitária é atualmente R$ 5,00, sujeita a atualização oficial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais são os horários de funcionamento do Metrô?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Em geral, entre 4h40 e 0h (meia-noite), com variações por linha e por estação. Em alguns dias, há operação estendida."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funcionam as integrações entre linhas e com ônibus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As integrações acontecem em estações de conexão e podem oferecer desconto nas tarifas dentro das regras do sistema integrado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Metrô e a CPTM são a mesma coisa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O Metrô opera linhas urbanas com intervalos menores em vias segregadas. A CPTM opera trens metropolitanos, com parte das linhas em corredores compartilhados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais formas de pagamento são aceitas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bilhete unitário, cartões pré-pagos e meios digitais habilitados nas bilheterias e máquinas de autoatendimento."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD ItemList para as linhas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Linhas do Metrô e CPTM de São Paulo",
+    "description": "Lista completa das linhas de transporte sobre trilhos de São Paulo",
+    "numberOfItems": 9,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Linha 1-Azul",
+        "description": "Jabaquara ↔ Tucuruvi",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-1-azul.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 1-Azul",
+          "color": "#0b9fdc",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Linha 2-Verde",
+        "description": "Vila Madalena ↔ Vila Prudente",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-2-verde.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 2-Verde",
+          "color": "#00a859",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Linha 3-Vermelha",
+        "description": "Barra Funda ↔ Itaquera",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-3-vermelha.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 3-Vermelha",
+          "color": "#d32f2f",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Linha 4-Amarela",
+        "description": "Vila Sônia ↔ Luz",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-4-amarela.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 4-Amarela",
+          "color": "#f59e0b",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Linha 5-Lilás",
+        "description": "Capão Redondo ↔ Chácara Klabin",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-5-lilas.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 5-Lilás",
+          "color": "#7e22ce",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Linha 6-Laranja",
+        "description": "Brasilândia ↔ São Joaquim",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-6-laranja.html",
+        "item": {
+          "@type": "SubwayLine",
+          "name": "Linha 6-Laranja",
+          "color": "#ea580c",
+          "operator": "Metrô de São Paulo"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Linha 7-Rubi",
+        "description": "Luz ↔ Jundiaí",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-7-rubi.html",
+        "item": {
+          "@type": "TrainLine",
+          "name": "Linha 7-Rubi",
+          "color": "#b91c1c",
+          "operator": "CPTM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Linha 8-Diamante",
+        "description": "Júlio Prestes ↔ Amador Bueno",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-8-diamante.html",
+        "item": {
+          "@type": "TrainLine",
+          "name": "Linha 8-Diamante",
+          "color": "#1e3a8a",
+          "operator": "CPTM"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Linha 9-Esmeralda",
+        "description": "Osasco ↔ Varginha",
+        "url": "https://transporte.wiki.br/sao-paulo/linha-9-esmeralda.html",
+        "item": {
+          "@type": "TrainLine",
+          "name": "Linha 9-Esmeralda",
+          "color": "#009688",
+          "operator": "CPTM"
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <script>
+    // Enhanced lazy loading with Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.classList.add('loaded');
+              observer.unobserve(img);
+            }
+          });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+      } else {
+        // Fallback for older browsers
+        images.forEach(img => img.classList.add('loaded'));
+      }
+    });
+  </script>
 </body>
 </html>
